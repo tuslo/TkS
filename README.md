@@ -12,3 +12,5 @@ $qrCode->setRenderer(new GoogleChartsRenderer());
 $qrCodeData = $qrCode->generate(); // returns the image data
 ```
 
+Please, run composer install & follow index.php
+
