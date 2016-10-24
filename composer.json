@@ -1,0 +1,21 @@
+{
+    "name": "TkS",
+    "description": "testTks",
+    "type": "lib",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/tuslo/testTkS.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"TkS\\": "src/"}
+    }
+}

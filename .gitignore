@@ -1,0 +1,10 @@
+/vendor
+*.log
+composer.phar
+.project
+nbproject/
+/.idea/
+*.*~
+/.vagrant/
+Vagrantfile
+composer.lock
