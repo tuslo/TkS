@@ -14,7 +14,7 @@ class QrCode implements QrCodeInterface
     public $width;
     public $height;
 
-    public function __construct($text, $width = 60, $height = 60)
+    public function __construct($text, $width = 50, $height = 50)
     {
         $this->text = $text;
         $this->width = $width;
