@@ -29,9 +29,9 @@ class QrCode implements QrCodeInterface
     public function setRenderer($rendererObject)
     {
         $this->renderer = $rendererObject;
-        $this->renderer->text = $this->text;
-        $this->renderer->width = $this->width;
-        $this->renderer->height = $this->height;
+        $this->renderer->setText($this->text);
+        $this->renderer->setWidth($this->width);
+        $this->renderer->setHeight($this->height);
     }
 
     /**

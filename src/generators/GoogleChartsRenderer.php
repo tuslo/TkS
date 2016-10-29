@@ -7,14 +7,48 @@
 
 namespace TkS\Generators;
 
-class GoogleChartsRenderer
+use TkS\Generators\RendererInterface;
+
+class GoogleChartsRenderer implements RendererInterface
 {
 
     private $cht = 'qr';
+    private $width = 50;
+    private $height = 50;
     private $chs = '50x50';
     private $chl = '';
     private $choe = 'UTF-8';
     private $baseUrl = 'https://chart.googleapis.com/chart';
+
+    /**
+     * Set up text for QR code
+     *
+     * @param string $text
+     */
+    public function setText($text)
+    {
+        $this->chl = $text;
+    }
+
+    /**
+     * Set up width for QR code
+     *
+     * @param string $width
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+    }
+
+    /**
+     * Set up height for QR code
+     *
+     * @param string $height
+     */
+    public function setHeight($height)
+    {
+        $this->$height = $height;
+    }
 
     /**
      * Builds request URL
