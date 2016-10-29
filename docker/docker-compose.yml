@@ -1,0 +1,21 @@
+tks-app:
+  build: ./php-fpm
+#  image: app-test
+  expose:
+    - "9000"
+  volumes:
+    - /var/www/TkS:/var/www/html/
+  environment:
+      API_TOKEN: "XXX"
+  restart: always
+
+tks-nginx:
+    build: ./nginx
+#    image: nginx:latest
+    ports:
+        - "81:80"
+    links:
+        - tks-app
+    volumes_from:
+        - tks-app
+    restart: always
